@@ -41,7 +41,7 @@ class IsoCodesValidationServiceProvider extends ServiceProvider
     private function getTranslationKeyFromMethodName($name)
     {
         if (stripos($name, 'validate') !== false) {
-            return Str::snake(substr($name, 8));
+            return \Str::snake(substr($name, 8));
         }
 
     }
