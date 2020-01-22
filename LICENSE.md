@@ -1,6 +1,6 @@
 # GNU General Public License v3.0 only
 
-Copyright (C) 2016 Peter Haak <info@pixelpeter.de> 2016
+Copyright (C) 2016 Peter Haak <damien@thu> 2016
 
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version.
 

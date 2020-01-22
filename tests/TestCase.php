@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\IsoCodesValidation;
+namespace Thunken\IsoCodesValidation;
 
 abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
 {
@@ -20,7 +20,7 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
     {
         $app = require __DIR__.'/../vendor/laravel/laravel/bootstrap/app.php';
 
-        $app->register(\Pixelpeter\IsoCodesValidation\IsoCodesValidationServiceProvider::class);
+        $app->register(\Thunken\IsoCodesValidation\IsoCodesValidationServiceProvider::class);
 
         $app->make(\Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 

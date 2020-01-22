@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\IsoCodesValidation;
+namespace Thunken\IsoCodesValidation;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class IsoCodesValidationServiceProvider extends ServiceProvider
         // registering intervention validator extension
         $this->app['validator']->resolver(function ($translator, $data, $rules, $messages, $customAttributes) {
             // set the validation error messages
-            foreach (get_class_methods('Pixelpeter\IsoCodesValidation\IsoCodesValidator') as $method) {
+            foreach (get_class_methods('Thunken\IsoCodesValidation\IsoCodesValidator') as $method) {
                 $key = $this->getTranslationKeyFromMethodName($method);
 
                 $messages[$key] = $this->getErrorMessage($translator, $messages, $key);
@@ -41,7 +41,7 @@ class IsoCodesValidationServiceProvider extends ServiceProvider
     private function getTranslationKeyFromMethodName($name)
     {
         if (stripos($name, 'validate') !== false) {
-            return /** @scrutinizer ignore-deprecated */ snake_case(substr($name, 8));
+            return Str::snake(substr($name, 8));
         }
 
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\IsoCodesValidation;
+namespace Thunken\IsoCodesValidation;
 
 
 use Exception;
